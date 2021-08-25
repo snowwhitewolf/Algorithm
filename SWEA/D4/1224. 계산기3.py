@@ -1,26 +1,3 @@
-def cal(a):
-    stack = []
-    for i in a:
-        if i.isdecimal():
-            stack.append(int(i))
-        elif i == '+':
-            n1 = stack.pop()
-            n2 = stack.pop()
-            stack.append(n2 + n1)
-        elif i == '-':
-            n1 = stack.pop()
-            n2 = stack.pop()
-            stack.append(n2 - n1)
-        elif i == '*':
-            n1 = stack.pop()
-            n2 = stack.pop()
-            stack.append(n2 * n1)
-        elif i == '/':
-            n1 = stack.pop()
-            n2 = stack.pop()
-            stack.append(n2 // n1)
-    return stack.pop()
-
 for t in range(10):
     num = int(input())
     n = input().rstrip()
@@ -46,4 +23,15 @@ for t in range(10):
                 stack.pop()
     while stack:
         result += stack.pop()
-    print('#{} {}'.format(t+1,cal(result)))
+    for i in result:
+        if i.isdecimal():
+            stack.append(int(i))
+        elif i == '+':
+            n1 = stack.pop()
+            n2 = stack.pop()
+            stack.append(n2 + n1)
+        elif i == '*':
+            n1 = stack.pop()
+            n2 = stack.pop()
+            stack.append(n2 * n1)
+    print('#{} {}'.format(t+1,stack.pop()))
