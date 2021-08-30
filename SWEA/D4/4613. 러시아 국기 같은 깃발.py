@@ -31,7 +31,7 @@ for t in range(int(input())):
         if lst[n-1][i] != 'R':
             cnt += 1
     for i in range(n-2,0,-1):
-        if lst[i].count('B') <= lst[i].count('R'):
+        if lst[i].count('B') < lst[i].count('R'):
             for j in range(m):
                 if lst[i][j] != 'R':
                     cnt += 1
