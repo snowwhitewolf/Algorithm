@@ -34,4 +34,4 @@ for t in range(10):
             n1 = stack.pop()
             n2 = stack.pop()
             stack.append(n2 * n1)
-    print('#{} {}'.format(t+1,stack.pop()))
+    print('#{} {}'.format(t+1, stack.pop()))

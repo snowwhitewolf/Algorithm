@@ -2,14 +2,14 @@ for _ in range(10):
     t = int(input())
     lst = []
     for _ in range(100):
-        lst.append(list(map(int,input().split())))
+        lst.append(list(map(int, input().split())))
         goal = 0
     for i in range(100):
         if lst[99][i] == 2:
             goal = i
     x = goal
     y = 99
-    while y!=0:
+    while y != 0:
         if x == 0:
             if lst[y][x + 1] == 0:
                 y -= 1

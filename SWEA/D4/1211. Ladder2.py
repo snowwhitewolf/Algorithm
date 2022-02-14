@@ -2,9 +2,9 @@ for _ in range(10):
     t = int(input())
     lst = []
     for _ in range(100):
-        lst.append(list(map(int,input().split())))
+        lst.append(list(map(int, input().split())))
 
-    result =10e18
+    result = 10e18
     min_x = 0
     min_cnt = 0
     for i in range(100):
@@ -12,7 +12,7 @@ for _ in range(10):
             x = i
             cnt = 0
             y = 99
-            while y!=0:
+            while y != 0:
                 if x == 0:
                     if lst[y][x + 1] == 0:
                         y -= 1

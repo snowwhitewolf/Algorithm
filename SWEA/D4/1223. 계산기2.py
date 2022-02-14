@@ -21,7 +21,8 @@ def cal(a):
             stack.append(n2 // n1)
     return stack.pop()
 
-for t in range(1,11):
+
+for t in range(1, 11):
     l = int(input())
     n = input().rstrip()
     result = ''
@@ -46,4 +47,4 @@ for t in range(1,11):
                 stack.pop()
     while stack:
         result += stack.pop()
-    print('#{} {}'.format(t,cal(result)))
+    print('#{} {}'.format(t, cal(result)))
