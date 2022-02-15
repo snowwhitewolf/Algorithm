@@ -1,6 +1,8 @@
 from collections import deque
 import sys
 sys.stdin = open('input.txt', 'r')
+
+
 def bfs(sy, sx):
     global yy, xx
     visited = [[0] * w for _ in range(h)]
@@ -21,8 +23,10 @@ def bfs(sy, sx):
                     visited[ny][nx] = visited[y][x] + 1
                     queue.append([ny, nx])
     return -1
+
+
 while True:
-    w, h = map(int,input().split())
+    w, h = map(int, input().split())
     if w == 0 and h == 0:
         break
     dust = []
@@ -31,12 +35,12 @@ while True:
     for y in range(h):
         for x in range(w):
             if MAP[y][x] == '*':
-                dust.append([y,x])
+                dust.append([y, x])
             elif MAP[y][x] == 'o':
                 sy = y
                 sx = x
-    dy = [-1,1,0,0]
-    dx = [0,0,-1,1]
+    dy = [-1, 1, 0, 0]
+    dx = [0, 0, -1, 1]
     yy = sy
     xx = sx
     while dust:
