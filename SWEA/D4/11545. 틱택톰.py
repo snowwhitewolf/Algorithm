@@ -27,18 +27,18 @@ def func(lst):
     cnto = 0
     for i in range(4):
         if lst[i][i] == 'X' or lst[i][i] == 'T':
-                cntx += 1
+            cntx += 1
         if lst[i][i] == 'O' or lst[i][i] == 'T':
             cnto += 1
     if cntx == 4:
-            return 'x'
+        return 'x'
     elif cnto == 4:
         return 'o'
     cntx = 0
     cnto = 0
     for i in range(4):
         if lst[i][3-i] == 'X' or lst[i][3-i] == 'T':
-                cntx += 1
+            cntx += 1
         if lst[i][3-i] == 'O' or lst[i][3-i] == 'T':
             cnto += 1
     if cntx == 4:
@@ -50,8 +50,10 @@ def func(lst):
             if lst[y][x] == '.':
                 return 'n'
     return 'd'
+
+
 for t in range(int(input())):
-    lst = [list(map(str,input().strip())) for _ in range(4)]
+    lst = [list(map(str, input().strip())) for _ in range(4)]
     b = input()
     if func(lst) == 'x':
         print('#{} X won'.format(t+1))
