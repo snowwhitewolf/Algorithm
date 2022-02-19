@@ -1,6 +1,6 @@
 T = int(input())
 
-for t in range(1,T+1):
+for t in range(1, T+1):
     tt = int(input())
     student = list(map(int, input().split()))
     cnt = 0

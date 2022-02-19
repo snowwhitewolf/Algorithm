@@ -1,13 +1,6 @@
-'''
-수도요금
-A : PW
-B : Q +S(W-R) or if W< R Q
-총 사용량 W
-'''
-
 T = int(input())
 
-for t in range(1,T+1):
+for t in range(1, T+1):
     num = list(map(int, input().split()))
 
     P = num[0]

@@ -8,4 +8,4 @@ for t in range(int(input())):
             total.append(int(str(n)[i]))
         total = sorted(list(set(total)))
         n += N
-    print('#{} {}'.format(t+1,n-N))
+    print('#{} {}'.format(t+1, n-N))
