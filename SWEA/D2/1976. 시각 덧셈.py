@@ -4,7 +4,6 @@
 '''
 
 
-
 T = int(input())
 for t in range(1, T+1):
     time = list(map(int, input().split()))
@@ -13,7 +12,7 @@ for t in range(1, T+1):
     h2 = time[2]
     s2 = time[3]
 
-    extra = divmod(s1+s2,60)
+    extra = divmod(s1+s2, 60)
     second = extra[1]
-    time = (h1+h2)%12 + extra[0]
+    time = (h1+h2) % 12 + extra[0]
     print(f'#{t} {time} {second}')
