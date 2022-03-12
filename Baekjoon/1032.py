@@ -6,7 +6,7 @@ res = ''
 
 for i in range(len(lst[0])):
     k = 0
-    for j in range(1,N):
+    for j in range(1, N):
         if lst[j][i] != lst[0][i]:
             res += '?'
             k = 1
