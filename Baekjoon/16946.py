@@ -2,7 +2,7 @@ from collections import deque
 
 def bfs(y,x):
     global n
-    visited = list([0] * M for _ in range(N))
+
     q = deque()
     family = []
     q.append([y,x])
@@ -34,7 +34,7 @@ number = list([0]*M for _ in range(N))
 dy = [1,-1,0,0]
 dx = [0,0,1,-1]
 cnt_lst = [0]
-
+visited = list([0] * M for _ in range(N))
 
 for y in range(N):
     for x in range(M):
@@ -54,4 +54,4 @@ for y in range(N):
                     total += cnt_lst[number[ny][nx]]
             res[y][x] = total%10
 for y in range(N):
-    print(res[y])
+    print("".join(list(map(str,res[y]))))
