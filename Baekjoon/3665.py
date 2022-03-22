@@ -10,7 +10,6 @@ for t in range(1,int(input())+1):
         change.append(a)
     def func(n,m):
         global q
-        b = 0
         nowin = 0
         for i in range(n):
             a = before[i]
@@ -24,15 +23,10 @@ for t in range(1,int(input())+1):
                 now[i+cnt] = a
             else:
                 while True:
-                    if nowin >= len(now):
-                        q= 1
-                        print("IMPOSSIBLE")
-                        return
-                    if now[b] == 0:
-                        now[b] = a
+                    if now[nowin] == 0:
+                        now[nowin] = a
                         break
                     else:
-                        b += 1
                         nowin += 1
         return
     func(n,m)
