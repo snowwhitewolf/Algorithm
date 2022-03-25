@@ -1,6 +1,6 @@
 lst = list(i for i in range(10001))
-result = list(i for i in range(1,10001))
-i=1
+result = list(i for i in range(1, 10001))
+i = 1
 for i in range(10001):
     n = lst[i]
     for j in range(len(str(lst[i]))):
