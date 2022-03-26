@@ -1,7 +1,7 @@
 T = int(input())
 
 
-for t in range(1,1+T):
+for t in range(1, 1+T):
     n = list(map(str, input().split()))
     input_list = list(map(str, input().split()))
     n0 = input_list.count('ZRO')

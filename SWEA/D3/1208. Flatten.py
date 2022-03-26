@@ -1,6 +1,6 @@
 for t in range(10):
     d = int(input())
-    b = list(map(int,input().split()))
+    b = list(map(int, input().split()))
     while d != 0:
         b.sort()
         b[0] += 1

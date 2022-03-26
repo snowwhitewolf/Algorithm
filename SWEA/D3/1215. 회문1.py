@@ -3,14 +3,13 @@ for tc in range(10):
     lst = []
     cnt = 0
     for l in range(8):
-        lst.append(list(map(str,input().strip())))
-    
+        lst.append(list(map(str, input().strip())))
+
     for y in range(8):
         for x in range(9 - k):
             if lst[y][x:x+k] == lst[y][x:x+k][::-1]:
                 cnt += 1
 
-        
     for y in range(9-k):
         for x in range(8):
             A = ''
@@ -18,6 +17,5 @@ for tc in range(10):
                 A += lst[y+z][x]
             if A == A[::-1]:
                 cnt += 1
-
 
     print(f'#{tc+1} {cnt}')
