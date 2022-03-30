@@ -12,7 +12,7 @@ for t in range(int(input())):
         elif a[i][0] == 2:
             v -= a[i][1]
             if v <= 0:
-                v=0
+                v = 0
             else:
                 result += v
         else:

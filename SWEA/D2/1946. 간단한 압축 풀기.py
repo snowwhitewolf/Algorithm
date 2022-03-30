@@ -5,11 +5,11 @@
 '''
 T = int(input())
 
-for t in range(1,T+1):
+for t in range(1, T+1):
     result = ''
     ch_list = []
     N = int(input())
-    
+
     for n in range(N):
         ch_num = list(map(str, input().split()))
         ch_list.append(ch_num)
@@ -17,8 +17,8 @@ for t in range(1,T+1):
     for i in range(N):
         result += ch_list[i][0] * int(ch_list[i][1])
 
-    total = len(result) //10 + 1
-    
+    total = len(result) // 10 + 1
+
     print(f'#{t}')
     for i in range(total):
         print(result[:10])

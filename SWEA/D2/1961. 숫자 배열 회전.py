@@ -2,7 +2,7 @@ for t in range(int(input())):
     N = int(input())
     lst = []
     for i in range(N):
-        lst.append(list(map(int,input().split())))
+        lst.append(list(map(int, input().split())))
     lst2 = list([0 for _ in range(N)] for _ in range(N))
     lst3 = list([0 for _ in range(N)] for _ in range(N))
     lst4 = list([0 for _ in range(N)] for _ in range(N))
@@ -21,11 +21,11 @@ for t in range(int(input())):
     print(f'#{t+1}')
     for i in range(N):
         for j in range(N):
-            print(lst2[i][j],end = '')
+            print(lst2[i][j], end='')
         print(end=' ')
         for j in range(N):
-            print(lst3[i][j],end = '')
+            print(lst3[i][j], end='')
         print(end=' ')
         for j in range(N):
-            print(lst4[i][j],end = '')
+            print(lst4[i][j], end='')
         print()
