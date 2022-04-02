@@ -1,4 +1,7 @@
-def score(lst_1,lst_2):
+from itertools import combinations
+
+
+def score(lst_1, lst_2):
     team1 = 0
     team2 = 0
     for i in lst_1:
@@ -9,12 +12,12 @@ def score(lst_1,lst_2):
             team2 += lst[i-1][j-1]
     return abs(team1-team2)
 
-from itertools import combinations
+
 N = int(input())
-lst = [list(map(int,input().split())) for _ in range(N)]
-total = list(range(1,N+1))
+lst = [list(map(int, input().split())) for _ in range(N)]
+total = list(range(1, N+1))
 res = 100000000
-team = list(combinations(total,N//2))
+team = list(combinations(total, N//2))
 
 for q in range(len(team)):
     team_1 = []
