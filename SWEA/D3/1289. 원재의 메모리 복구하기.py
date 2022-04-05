@@ -1,5 +1,5 @@
 for t in range(int(input())):
-    m = list(map(int,input().strip()))
+    m = list(map(int, input().strip()))
     x = [0 for _ in range(len(m))]
     cnt = 0
     for i in range(len(m)):

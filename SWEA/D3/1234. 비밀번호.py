@@ -1,5 +1,5 @@
-for t in range(1,11):
-    N , a = map(int,input().split())
+for t in range(1, 11):
+    N, a = map(int, input().split())
     lst = []
     for i in str(a):
         lst.append(i)

@@ -2,7 +2,7 @@ from collections import deque
 
 for t in range(10):
     tc = input()
-    lst = list(map(int,input().split()))
+    lst = list(map(int, input().split()))
     pwd = deque()
     for i in range(8):
         pwd.append(lst[i])
@@ -21,7 +21,7 @@ for t in range(10):
     for i in range(8):
         result.append(pwd.popleft())
 
-    print('#{}'.format(tc),end=' ')
+    print('#{}'.format(tc), end=' ')
     for i in range(8):
-        print(result[i],end=' ')
+        print(result[i], end=' ')
     print()

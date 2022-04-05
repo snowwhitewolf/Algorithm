@@ -1,6 +1,6 @@
 for t in range(int(input())):
-    n,m,k = map(int,input().split())
-    lst = list(map(int,input().split()))
+    n, m, k = map(int, input().split())
+    lst = list(map(int, input().split()))
     lst.sort()
     res = 'Possible'
     order = 0
@@ -10,4 +10,4 @@ for t in range(int(input())):
             break
         else:
             order += 1
-    print('#{} {}'.format(t+1,res))
+    print('#{} {}'.format(t+1, res))

@@ -1,5 +1,5 @@
 for t in range(int(input())):
-    L, U, X = map(int,input().split())
+    L, U, X = map(int, input().split())
     a = 0
     if X > U:
         a = -1
