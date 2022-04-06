@@ -5,7 +5,7 @@ for t in range(T):
     n = list(map(int, input().split()))
     numbers.append(n)
 
-avg =0
+avg = 0
 for i in range(T):
     for j in range(10):
         avg += numbers[i][j]

@@ -1,2 +1,2 @@
-s=str(input())
+s = str(input())
 print(s.upper())
