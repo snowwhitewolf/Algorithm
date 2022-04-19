@@ -1,0 +1,48 @@
+import sys
+sys.stdin = open("input.txt", "r")
+
+def func(node,s,e):
+    if s == e:
+        tree[node] = lst[s]
+        return lst[s]
+    else:
+        tree[node] = func(node*2,s,(s+e)//2) + func(node*2+1,(s+e)//2+1,e)
+        return tree[node]
+
+def changing(node, s, e, index, change):
+        if s <= index <= e:
+            tree[node] += change
+            if s != e:
+                changing(node*2,s,(s+e)//2,index,change)
+                changing(node * 2+1, (s + e) // 2+1, e, index, change)
+
+
+# s~e l~r (s < l, e < r or s > l, e > r)???
+def ssum(node,s,e,l,r):
+    if l > e or s > r:
+        return 0
+    if l ?? s and e ??? r:
+        print(node, tree[node])
+        return tree[node]
+
+    return ssum(node * 2, s, (s+e)//2, l, r) + ssum(node * 2 + 1, (s + e) // 2 + 1, e, l, r)
+
+
+N, M, K = map(int,input().split())
+tree = [0] * 2000000
+lst = [0]
+res = []
+
+
+for _ in range(N):
+    lst.append(int(input()))
+func(1,1,N)
+print(tree[1:15])
+for _ in range(M+K):
+    a,b,c = map(int,input().split())
+    if a == 1:
+        change = c - lst[b]
+        changing(1,1,N,b,change)
+        print(tree[1:15])
+    else:
+        print(ssum(1,0,N,b,c))
