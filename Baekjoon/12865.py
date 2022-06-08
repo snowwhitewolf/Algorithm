@@ -1,3 +1,6 @@
 N, K = map(int,input().split())
-for _ in range(N-1):
+lst = []
+for _ in range(N):
     W, V = map(int,input().split())
+    lst.append([W,V])
+print(lst)
