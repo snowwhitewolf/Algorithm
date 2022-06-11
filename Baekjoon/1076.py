@@ -17,8 +17,13 @@ for _ in range(3):
 res = ''
 for i in range(3):
     if i == 2:
-        for _ in range(lst[lst3[i]]):
-            res += '0'
+        if lst3[i] == 'black':
+            break
+        else:
+            res += '0'*lst[lst3[i]]
     else:
         res += str(lst[lst3[i]])
-print(res)
+if res[0] == '0':
+    print(res[1:])
+else:
+    print(res)
