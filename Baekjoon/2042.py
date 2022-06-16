@@ -1,6 +1,3 @@
-
-
-
 N, M, K = map(int,input().split())
 tree = [0] * 4000000
 lst = [0]
